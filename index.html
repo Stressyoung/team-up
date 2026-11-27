@@ -173,6 +173,11 @@
   .result h3 { font-family: "Shrikhand", cursive; font-weight: 400; font-size: 36px; margin: 8px 0 12px;
     background: linear-gradient(90deg, var(--red), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
+  /* logo */
+  .logo { display: inline-flex; align-items: center; gap: 10px; }
+  .logo .mark { width: 30px; height: 30px; color: var(--text); flex: none; }
+  .hero-mark { display: block; width: 96px; height: 94px; margin: 0 auto 22px; color: var(--text); filter: drop-shadow(0 0 18px rgba(111,135,255,.45)); }
+
   /* story */
   .story-quote { font-family: "Caveat", cursive; font-size: clamp(28px, 4vw, 38px); line-height: 1.3; text-align: center; max-width: 760px; margin: 50px auto 0; color: #dfe4ff; }
   .story-quote span { display: block; font-family: "DM Sans", sans-serif; font-size: 15px; color: var(--muted); margin-top: 10px; }
@@ -196,10 +201,26 @@
 </head>
 <body>
 <canvas id="stars"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="fadeHead" gradientUnits="userSpaceOnUse" x1="77" y1="0" x2="98" y2="0">
+      <stop offset="0" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeBody" gradientUnits="userSpaceOnUse" x1="55" y1="0" x2="120" y2="0">
+      <stop offset="0" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </linearGradient>
+    <symbol id="collab-logo" viewBox="0 0 180 175">
+      <circle cx="70" cy="35" r="28" fill="url(#fadeHead)"/>
+      <circle cx="105" cy="35" r="28" fill="none" stroke="currentColor" stroke-width="5"/>
+      <path d="M20 172 V125 A50 50 0 0 1 120 125 V172 Z" fill="url(#fadeBody)"/>
+      <path d="M55 172 V125 A50 50 0 0 1 155 125 V172 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="logo">Team up</a>
+    <a href="#top" class="logo"><svg class="mark" viewBox="0 0 180 175" aria-hidden="true"><use href="#collab-logo"/></svg>Team up</a>
     <ul>
       <li><a href="#what">What is it</a></li>
       <li><a href="#why">Why it matters</a></li>
@@ -213,6 +234,7 @@
 
 <header class="hero" id="top">
   <div class="wrap">
+    <svg class="hero-mark" viewBox="0 0 180 175" role="img" aria-label="Collaboration logo"><use href="#collab-logo"/></svg>
     <span class="tag">Grade 11C project · CIS Astana</span>
     <h1>Collaboration</h1>
     <div class="neon">The future is here</div>
@@ -368,19 +390,16 @@
     </div>
     <div class="timeline">
       <div class="t-item reveal">
-        <div class="when">Now</div>
-        <h3>Borderless & real‑time global teams</h3>
-        <p class="muted">People from different countries can work on one project at the same time with video calls and online documents.</p>
+        <h3>Faster problem-solving</h3>
+        <p class="muted">Hard problems will be solved much faster, because people will work in global teams and use smart tools.</p>
       </div>
       <div class="t-item reveal">
-        <div class="when">Soon</div>
-        <h3>People and AI working together</h3>
-        <p class="muted">AI will help with simple tasks, but people still need to make decisions together.</p>
+        <h3>Stronger innovation</h3>
+        <p class="muted">People will mix their different ideas with AI to create things nobody has seen before.</p>
       </div>
       <div class="t-item reveal">
-        <div class="when">Our future</div>
-        <h3>Solving big problems together</h3>
-        <p class="muted">Problems like climate change or new diseases are too big for one person or one country. We can only solve them together.</p>
+        <h3>Global ecosystems</h3>
+        <p class="muted">People from all around the world will work together to solve big problems, like climate change or new diseases.</p>
       </div>
     </div>
   </div>
