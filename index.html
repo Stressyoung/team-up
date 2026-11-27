@@ -173,6 +173,12 @@
   .result h3 { font-family: "Shrikhand", cursive; font-weight: 400; font-size: 36px; margin: 8px 0 12px;
     background: linear-gradient(90deg, var(--red), var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
+  /* story */
+  .story-quote { font-family: "Caveat", cursive; font-size: clamp(28px, 4vw, 38px); line-height: 1.3; text-align: center; max-width: 760px; margin: 50px auto 0; color: #dfe4ff; }
+  .story-quote span { display: block; font-family: "DM Sans", sans-serif; font-size: 15px; color: var(--muted); margin-top: 10px; }
+  .story-link { color: var(--orange); font-weight: 700; text-decoration: none; }
+  .story-link:hover { text-decoration: underline; }
+
   /* poster */
   .poster { margin-top: 30px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(40,60,255,.18); }
   .poster img { display: block; width: 100%; height: auto; }
@@ -197,6 +203,7 @@
     <ul>
       <li><a href="#what">What is it</a></li>
       <li><a href="#why">Why it matters</a></li>
+      <li><a href="#story">My story</a></li>
       <li><a href="#future">Future</a></li>
       <li><a href="#challenge">Challenge</a></li>
       <li><a href="#quiz">Quiz</a></li>
@@ -314,6 +321,40 @@
         <li>Many big companies were started by two or three friends, not by one person.</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">a real example</div>
+      <h2>How collaboration helps us at GoPrep</h2>
+      <p class="muted" style="max-width:680px">I work at Aleem, the company that makes <a class="story-link" href="https://goprep.gg" target="_blank" rel="noopener">GoPrep</a>, an app that helps students prepare for exams. I am Head of Growth, so my job is to help the company grow and get more users.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="num">20+</div><p>people in our team</p></div>
+      <div class="stat"><div class="num">700+</div><p>users already use GoPrep</p></div>
+      <div class="stat"><div class="num">1</div><p>goal for all of us: help students get ready for exams</p></div>
+    </div>
+    <div class="grid g2" style="margin-top:30px">
+      <div class="card reveal">
+        <h3>We split the tasks</h3>
+        <p class="muted">Everyone has their own part of the work. Together all these parts become one app.</p>
+      </div>
+      <div class="card reveal">
+        <h3>We discuss ideas</h3>
+        <p class="muted">We talk about ideas as a team and choose the best one, not just the idea of one person.</p>
+      </div>
+      <div class="card reveal">
+        <h3>We help each other</h3>
+        <p class="muted">If someone is stuck, others help, so we don't lose time.</p>
+      </div>
+      <div class="card reveal">
+        <h3>We work for one goal</h3>
+        <p class="muted">Everyone knows what we are working for. That is how we got our first 700+ users.</p>
+      </div>
+    </div>
+    <p class="story-quote reveal">"In a team of 20+ people it's impossible to work without collaboration. You have to split the tasks, or nothing works."<span>me, Head of Growth at GoPrep</span></p>
   </div>
 </section>
 
